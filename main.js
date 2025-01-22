@@ -12,4 +12,4 @@ setInterval(() => {
   setTimeout(() => {
     arrow.style.visibility = "hidden";
   }, 500);
-}, 1000);
+}, 2000);
