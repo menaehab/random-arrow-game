@@ -3,13 +3,24 @@ let choices = [
   `<i class="fas fa-arrow-left-long"></i>`,
   `<i class="fas fa-arrow-right-long"></i>`
 ];
-setInterval(() => {
-  let randomChoice = choices[Math.floor(Math.random() * choices.length)];
+let counter = 4;
+let interval = setInterval(() => {
+  counter--;
+  if (counter === 0) {
+    clearInterval(interval);
+  }
+  document.getElementById("arrow").innerText = counter;
+}, 1000);
 
-  arrow.innerHTML = randomChoice;
-  arrow.style.visibility = "visible";
+setTimeout(() => {
+  setInterval(() => {
+    let randomChoice = choices[Math.floor(Math.random() * choices.length)];
 
-  setTimeout(() => {
-    arrow.style.visibility = "hidden";
-  }, 500);
-}, 2000);
+    arrow.innerHTML = randomChoice;
+    arrow.style.visibility = "visible";
+
+    setTimeout(() => {
+      arrow.style.visibility = "hidden";
+    }, 500);
+  }, 2000);
+}, 3000);
