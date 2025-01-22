@@ -1,0 +1,16 @@
+.game {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container.text-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrows i {
+  font-size: 12rem;
+}
